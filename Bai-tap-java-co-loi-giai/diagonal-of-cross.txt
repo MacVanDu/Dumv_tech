@@ -1,0 +1,16 @@
+public class DiagonalOfCross {
+
+    public static void main(String[] args) {
+        // diện tích hình chữ thập
+        double S = 15;
+        //tính do dai của hình vuông nhỏ
+        double a = Math.sqrt(S/5);
+        //tính do dai của duong cheo
+        double di = a*Math.sqrt(10);
+        //lam son so
+        di= Math.round((di*10))/10.0;
+        System.out.println(di);
+        
+    }
+
+}
