@@ -1,0 +1,24 @@
+public class BaiSo1 {
+
+    public static int timUCLN(int a,int b){
+        while(b!=0){ /// b = 2 | 1
+            int x = b;//x = 2 | 1
+            b= a % b;//b = 1 | 0
+            a=x;//a = 2 | 1
+        }
+        return a;
+    }
+    public static void main(String[] args) {
+        long s_time = System.currentTimeMillis();
+        int a = 55632132,
+                b = 321321421,
+                c = 242132141;
+        int ab = timUCLN(a, b);
+        int abc = timUCLN(ab, c);
+        System.out.println(abc);
+        long e_time = System.currentTimeMillis();
+        long time = e_time-s_time;
+        System.out.println(time);
+    }
+
+}
