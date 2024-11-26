@@ -18,7 +18,7 @@ Hãy giúp tôi bằng cách **ủng hộ 15k** – đủ để mua một ly cà
 ### 2. Quét mã QR  
 Nếu bạn cảm thấy lười nhập số tài khoản, chỉ cần quét mã QR bên dưới và bấm gửi **15k** là xong!  
 
-![Mã QR]([https://your-image-hosting-url.com/qr-code.png](https://dumv.tech/wp-content/uploads/2024/11/ed72aba2ca4713194a56.jpg))  
+![Mã QR](https://dumv.tech/wp-content/uploads/2024/11/ed72aba2ca4713194a56.jpg)  
 
 ---
 
