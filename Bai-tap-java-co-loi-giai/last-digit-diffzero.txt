@@ -1,0 +1,39 @@
+
+public class last_digit_diffzero {
+    
+    public static int  tim_so_khac_khong_cuoi_cung_cua_n_giai_thua(int n){
+        int ket_qua=-1;
+        ///tính n giai thua
+        int n_giai_thua=1;
+        int n1=0;
+        int n2=0;
+        int mod = 100000;
+        
+        
+        for (int i = 1; i <= n; i++) {
+            int x = i;
+            if(x%2==0){
+                x=x/2;
+                n1++;
+            }
+            if(x%5==0){
+                x=x/5;
+                n2++;
+            }
+            n_giai_thua = (n_giai_thua*x)%mod;
+        }
+        
+        for (int i = 0; i < (n1-n2); i++) {
+         n_giai_thua =   (n_giai_thua *2)%mod;
+        }
+        
+        ket_qua = n_giai_thua%10;
+        return ket_qua;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(tim_so_khac_khong_cuoi_cung_cua_n_giai_thua(5));
+        System.out.println(tim_so_khac_khong_cuoi_cung_cua_n_giai_thua(6));
+        System.out.println(tim_so_khac_khong_cuoi_cung_cua_n_giai_thua(23));
+    }
+}
