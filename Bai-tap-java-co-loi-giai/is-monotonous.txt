@@ -1,0 +1,31 @@
+
+public class Is_Monotonous {
+    
+    public static boolean kiem_tra_su_don_dieu(int mang[]){
+        if(mang.length <=1){
+            return true;
+        }
+        
+        boolean mang_dang_tang = true;//mac dinh mang dang tang dan
+        boolean mang_dang_giam = true;//mac dinh mang dang giam dan
+        
+        for(int i=1;i<mang.length;i++){
+            if(mang[i] <= mang[i-1]){
+                mang_dang_tang = false;
+            }
+            if(mang[i] >= mang[i-1]){
+                mang_dang_giam = false;
+            }
+        }
+        return mang_dang_tang || mang_dang_giam;
+    }
+    public static void main(String[] args) {
+        int mang_so_nguyen_1[] = new int[]{1, 4, 5, 7, 9};
+        int mang_so_nguyen_2[] = new int[]{0};
+        int mang_so_nguyen_3[] = new int[]{3,3};
+        int mang_so_nguyen_4[] = new int[]{10,7,4,3,2,0};
+        int mang_so_nguyen_5[] = new int[]{10,7,8,3,2,0};
+        
+        System.out.println(kiem_tra_su_don_dieu(mang_so_nguyen_5));
+    }
+}
