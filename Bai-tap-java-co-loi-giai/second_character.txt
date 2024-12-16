@@ -1,0 +1,43 @@
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String s ="abcaaabeabddchtrtwrfdsfdsghihgidhiqhr";
+        /*
+        12A : 36
+        12B : 40
+         */
+        Map<Character, Integer> arr_bo_dem = new HashMap<>();
+        for (char c : s.toCharArray()) {/// abaa => ['a','b','a','a']
+            arr_bo_dem.put(c, arr_bo_dem.getOrDefault(c, 0) + 1);
+        }
+
+        List<Integer> arr_sap_sep = new ArrayList<>(arr_bo_dem.values());
+        Collections.sort(arr_sap_sep, Collections.reverseOrder());///
+
+        int gia_tri_lon_nhat = arr_sap_sep.get(0);
+        int gia_tri_lon_thu_2 = -1;
+        for (Integer integer : arr_sap_sep) {
+            if (integer < gia_tri_lon_nhat) {
+                gia_tri_lon_thu_2 = integer;
+                break;
+            }
+        }
+        if (gia_tri_lon_thu_2 == -1) {
+            System.out.println("?");
+        } else {
+            for (Map.Entry<Character, Integer> dong : arr_bo_dem.entrySet()) {
+                if (dong.getValue() == gia_tri_lon_thu_2) {
+                    System.out.println(dong.getKey());
+                    break;
+                }
+            }
+        }
+
+        // a : null 
+        // a : 0
+        // a : 1
+        // a : 1 + 1 =2
+    }
